@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="520" viewBox="0 0 1000 520"><rect width="100%" height="100%" fill="white"/>
+<text x="500.0" y="34" font-family="Arial,sans-serif" font-size="21" fill="#17324d" text-anchor="middle" font-weight="bold">Target remaining hours distribution</text>
+<text x="500.0" y="57" font-family="Arial,sans-serif" font-size="12" fill="#52616b" text-anchor="middle" font-weight="normal">49,503 shown; x-axis capped at P99=45.74 h, 497 clipped</text>
+<line x1="75" y1="455" x2="965" y2="455" stroke="#52616b"/>
+<line x1="75" y1="75" x2="75" y2="455" stroke="#52616b"/>
+<rect x="76.0" y="307.0" width="22.7" height="148.0" fill="#f18f01"/>
+<rect x="100.7" y="292.2" width="22.7" height="162.8" fill="#f18f01"/>
+<rect x="125.4" y="218.7" width="22.7" height="236.3" fill="#f18f01"/>
+<rect x="150.2" y="277.8" width="22.7" height="177.2" fill="#f18f01"/>
+<rect x="174.9" y="252.2" width="22.7" height="202.8" fill="#f18f01"/>
+<rect x="199.6" y="313.6" width="22.7" height="141.4" fill="#f18f01"/>
+<rect x="224.3" y="296.7" width="22.7" height="158.3" fill="#f18f01"/>
+<rect x="249.1" y="75.0" width="22.7" height="380.0" fill="#f18f01"/>
+<rect x="273.8" y="191.7" width="22.7" height="263.3" fill="#f18f01"/>
+<rect x="298.5" y="355.7" width="22.7" height="99.3" fill="#f18f01"/>
+<rect x="323.2" y="332.0" width="22.7" height="123.0" fill="#f18f01"/>
+<rect x="347.9" y="313.6" width="22.7" height="141.4" fill="#f18f01"/>
+<rect x="372.7" y="220.4" width="22.7" height="234.6" fill="#f18f01"/>
+<rect x="397.4" y="197.4" width="22.7" height="257.6" fill="#f18f01"/>
+<rect x="422.1" y="155.6" width="22.7" height="299.4" fill="#f18f01"/>
+<rect x="446.8" y="335.1" width="22.7" height="119.9" fill="#f18f01"/>
+<rect x="471.6" y="174.8" width="22.7" height="280.2" fill="#f18f01"/>
+<rect x="496.3" y="402.8" width="22.7" height="52.2" fill="#f18f01"/>
+<rect x="521.0" y="212.1" width="22.7" height="242.9" fill="#f18f01"/>
+<rect x="545.7" y="220.0" width="22.7" height="235.0" fill="#f18f01"/>
+<rect x="570.4" y="312.3" width="22.7" height="142.7" fill="#f18f01"/>
+<rect x="595.2" y="279.9" width="22.7" height="175.1" fill="#f18f01"/>
+<rect x="619.9" y="224.9" width="22.7" height="230.1" fill="#f18f01"/>
+<rect x="644.6" y="299.2" width="22.7" height="155.8" fill="#f18f01"/>
+<rect x="669.3" y="285.7" width="22.7" height="169.3" fill="#f18f01"/>
+<rect x="694.1" y="341.8" width="22.7" height="113.2" fill="#f18f01"/>
+<rect x="718.8" y="361.4" width="22.7" height="93.6" fill="#f18f01"/>
+<rect x="743.5" y="383.7" width="22.7" height="71.3" fill="#f18f01"/>
+<rect x="768.2" y="82.9" width="22.7" height="372.1" fill="#f18f01"/>
+<rect x="792.9" y="294.3" width="22.7" height="160.7" fill="#f18f01"/>
+<rect x="817.7" y="334.0" width="22.7" height="121.0" fill="#f18f01"/>
+<rect x="842.4" y="366.6" width="22.7" height="88.4" fill="#f18f01"/>
+<rect x="867.1" y="389.7" width="22.7" height="65.3" fill="#f18f01"/>
+<rect x="891.8" y="436.8" width="22.7" height="18.2" fill="#f18f01"/>
+<rect x="916.6" y="385.5" width="22.7" height="69.5" fill="#f18f01"/>
+<rect x="941.3" y="380.9" width="22.7" height="74.1" fill="#f18f01"/>
+<text x="75" y="477" font-family="Arial,sans-serif" font-size="11" fill="#52616b" text-anchor="middle" font-weight="normal">0.0</text>
+<text x="297.5" y="477" font-family="Arial,sans-serif" font-size="11" fill="#52616b" text-anchor="middle" font-weight="normal">11.4</text>
+<text x="520.0" y="477" font-family="Arial,sans-serif" font-size="11" fill="#52616b" text-anchor="middle" font-weight="normal">22.9</text>
+<text x="742.5" y="477" font-family="Arial,sans-serif" font-size="11" fill="#52616b" text-anchor="middle" font-weight="normal">34.3</text>
+<text x="965" y="477" font-family="Arial,sans-serif" font-size="11" fill="#52616b" text-anchor="middle" font-weight="normal">45.7</text>
+<text x="500.0" y="505" font-family="Arial,sans-serif" font-size="13" fill="#263238" text-anchor="middle" font-weight="normal">Target remaining hours</text>
+</svg>

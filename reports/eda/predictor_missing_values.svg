@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="210" viewBox="0 0 1000 210"><rect width="100%" height="100%" fill="white"/>
+<text x="500.0" y="34" font-family="Arial,sans-serif" font-size="20" fill="#17324d" text-anchor="middle" font-weight="bold">Predictor missing values (count)</text>
+<text x="391" y="79" font-family="Arial,sans-serif" font-size="12" fill="#263238" text-anchor="end" font-weight="normal">minutes_since_pickup_scan</text>
+<rect x="400" y="64" width="545.0" height="18" rx="2" fill="#247ba0"/>
+<text x="951.0" y="78" font-family="Arial,sans-serif" font-size="12" fill="#263238" text-anchor="start" font-weight="normal">2605</text>
+<text x="391" y="106" font-family="Arial,sans-serif" font-size="12" fill="#263238" text-anchor="end" font-weight="normal">latest_event_leg_number</text>
+<rect x="400" y="91" width="250.4" height="18" rx="2" fill="#247ba0"/>
+<text x="656.4280230326295" y="105" font-family="Arial,sans-serif" font-size="12" fill="#263238" text-anchor="start" font-weight="normal">1197</text>
+</svg>

@@ -1,0 +1,42 @@
+{
+  "models": {
+    "dummy": {
+      "train": {
+        "mae_hours": 9.900577881857144,
+        "r_squared": -0.00709679223496007,
+        "rmse_hours": 11.67508934556136
+      },
+      "validation": {
+        "mae_hours": 9.854960101066666,
+        "r_squared": -0.017492030520845914,
+        "rmse_hours": 11.743303370070615
+      }
+    },
+    "ridge": {
+      "train": {
+        "mae_hours": 1.5531815936724473,
+        "r_squared": 0.9703352969298727,
+        "rmse_hours": 2.0037549546237514
+      },
+      "validation": {
+        "mae_hours": 1.613444535884157,
+        "r_squared": 0.9686184191514957,
+        "rmse_hours": 2.062349097168557
+      }
+    }
+  },
+  "selected_model_test_once": {
+    "mae_hours": 1.603825405121112,
+    "r_squared": 0.9697127616681227,
+    "rmse_hours": 2.04676909528347
+  },
+  "selection": {
+    "criterion": "lowest validation MAE; validation RMSE breaks ties",
+    "selected_model": "ridge"
+  },
+  "units": {
+    "mae": "hours",
+    "r_squared": "unitless",
+    "rmse": "hours"
+  }
+}

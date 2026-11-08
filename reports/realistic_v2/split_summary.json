@@ -1,0 +1,32 @@
+{
+  "boundaries_utc": {
+    "train_end_inclusive": "2026-07-30T09:50:00+00:00",
+    "validation_end_inclusive": "2026-09-13T02:58:54+00:00"
+  },
+  "counts": {
+    "test": 7500,
+    "train": 35000,
+    "validation": 7500
+  },
+  "date_ranges_utc": {
+    "test": {
+      "max": "2026-10-28T05:56:00+00:00",
+      "min": "2026-09-13T03:15:00+00:00"
+    },
+    "train": {
+      "max": "2026-07-30T09:50:00+00:00",
+      "min": "2026-01-01T05:43:54+00:00"
+    },
+    "validation": {
+      "max": "2026-09-13T02:58:54+00:00",
+      "min": "2026-07-30T09:56:00+00:00"
+    }
+  },
+  "method": "chronological predicted_at cutoffs, approximately 70/15/15; tied timestamps kept together",
+  "shipment_counts": {
+    "test": 7500,
+    "train": 35000,
+    "validation": 7500
+  },
+  "shipment_overlap_count": 0
+}

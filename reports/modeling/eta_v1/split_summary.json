@@ -1,0 +1,34 @@
+{
+  "boundaries_utc": {
+    "train_end_inclusive": "2026-07-30 09:50:00+00:00",
+    "validation_end_inclusive": "2026-09-13 02:58:54+00:00"
+  },
+  "counts": {
+    "test": 7500,
+    "train": 35000,
+    "validation": 7500
+  },
+  "date_ranges_utc": {
+    "test": {
+      "max": "2026-10-28 05:56:00+00:00",
+      "min": "2026-09-13 03:15:00+00:00"
+    },
+    "train": {
+      "max": "2026-07-30 09:50:00+00:00",
+      "min": "2026-01-01 05:43:54+00:00"
+    },
+    "validation": {
+      "max": "2026-09-13 02:58:54+00:00",
+      "min": "2026-07-30 09:56:00+00:00"
+    }
+  },
+  "method": "chronological predicted_at cutoffs from reports/eda/eda_metrics.json",
+  "predicted_at_max": "2026-10-28 05:56:00+00:00",
+  "predicted_at_min": "2026-01-01 05:43:54+00:00",
+  "shipment_counts": {
+    "test": 7500,
+    "train": 35000,
+    "validation": 7500
+  },
+  "shipment_overlap_count": 0
+}

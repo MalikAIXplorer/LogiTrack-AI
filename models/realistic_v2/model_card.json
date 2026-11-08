@@ -1,0 +1,18 @@
+{
+  "dataset": "synthetic realistic_v2",
+  "limitations": [
+    "Synthetic-data scores do not establish real-world performance or production readiness."
+  ],
+  "selected_model": "ridge",
+  "target": "target_remaining_hours",
+  "test_metrics": {
+    "mae_hours": 1.0091277509075822,
+    "r_squared": 0.9865833053569474,
+    "rmse_hours": 1.412511787884969
+  },
+  "validation_metrics": {
+    "mae_hours": 0.9841356376987792,
+    "r_squared": 0.9871664405980038,
+    "rmse_hours": 1.3702209261954112
+  }
+}

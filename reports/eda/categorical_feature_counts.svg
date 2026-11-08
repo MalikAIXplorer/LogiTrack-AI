@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="588" viewBox="0 0 1000 588"><rect width="100%" height="100%" fill="white"/>
+<text x="500.0" y="34" font-family="Arial,sans-serif" font-size="20" fill="#17324d" text-anchor="middle" font-weight="bold">Common categorical predictor values</text>
+<text x="391" y="79" font-family="Arial,sans-serif" font-size="12" fill="#263238" text-anchor="end" font-weight="normal">last_observed_state: in_transit</text>
+<rect x="400" y="64" width="545.0" height="18" rx="2" fill="#247ba0"/>
+<text x="951.0" y="78" font-family="Arial,sans-serif" font-size="12" fill="#263238" text-anchor="start" font-weight="normal">48803</text>
+<text x="391" y="106" font-family="Arial,sans-serif" font-size="12" fill="#263238" text-anchor="end" font-weight="normal">latest_event_type: departed</text>
+<rect x="400" y="91" width="482.4" height="18" rx="2" fill="#247ba0"/>
+<text x="888.3846894658116" y="105" font-family="Arial,sans-serif" font-size="12" fill="#263238" text-anchor="start" font-weight="normal">43196</text>
+<text x="391" y="133" font-family="Arial,sans-serif" font-size="12" fill="#263238" text-anchor="end" font-weight="normal">shipment_priority: standard</text>
+<rect x="400" y="118" width="279.2" height="18" rx="2" fill="#247ba0"/>
+<text x="685.1836567424134" y="132" font-family="Arial,sans-serif" font-size="12" fill="#263238" text-anchor="start" font-weight="normal">25000</text>
+<text x="391" y="160" font-family="Arial,sans-serif" font-size="12" fill="#263238" text-anchor="end" font-weight="normal">shipment_priority: low</text>
+<rect x="400" y="145" width="139.6" height="18" rx="2" fill="#247ba0"/>
+<text x="545.5918283712067" y="159" font-family="Arial,sans-serif" font-size="12" fill="#263238" text-anchor="start" font-weight="normal">12500</text>
+<text x="391" y="187" font-family="Arial,sans-serif" font-size="12" fill="#263238" text-anchor="end" font-weight="normal">shipment_priority: high</text>
+<rect x="400" y="172" width="139.6" height="18" rx="2" fill="#247ba0"/>
+<text x="545.5918283712067" y="186" font-family="Arial,sans-serif" font-size="12" fill="#263238" text-anchor="start" font-weight="normal">12500</text>
+<text x="391" y="214" font-family="Arial,sans-serif" font-size="12" fill="#263238" text-anchor="end" font-weight="normal">service_mode: ftl</text>
+<rect x="400" y="199" width="83.8" height="18" rx="2" fill="#247ba0"/>
+<text x="489.75509702272404" y="213" font-family="Arial,sans-serif" font-size="12" fill="#263238" text-anchor="start" font-weight="normal">7500</text>
+<text x="391" y="241" font-family="Arial,sans-serif" font-size="12" fill="#263238" text-anchor="end" font-weight="normal">service_mode: parcel</text>
+<rect x="400" y="226" width="83.8" height="18" rx="2" fill="#247ba0"/>
+<text x="489.75509702272404" y="240" font-family="Arial,sans-serif" font-size="12" fill="#263238" text-anchor="start" font-weight="normal">7500</text>
+<text x="391" y="268" font-family="Arial,sans-serif" font-size="12" fill="#263238" text-anchor="end" font-weight="normal">service_mode: last_mile</text>
+<rect x="400" y="253" width="83.8" height="18" rx="2" fill="#247ba0"/>
+<text x="489.75509702272404" y="267" font-family="Arial,sans-serif" font-size="12" fill="#263238" text-anchor="start" font-weight="normal">7500</text>
+<text x="391" y="295" font-family="Arial,sans-serif" font-size="12" fill="#263238" text-anchor="end" font-weight="normal">carrier_type: ocean</text>
+<rect x="400" y="280" width="83.8" height="18" rx="2" fill="#247ba0"/>
+<text x="489.75509702272404" y="294" font-family="Arial,sans-serif" font-size="12" fill="#263238" text-anchor="start" font-weight="normal">7500</text>
+<text x="391" y="322" font-family="Arial,sans-serif" font-size="12" fill="#263238" text-anchor="end" font-weight="normal">carrier_type: ftl</text>
+<rect x="400" y="307" width="83.8" height="18" rx="2" fill="#247ba0"/>
+<text x="489.75509702272404" y="321" font-family="Arial,sans-serif" font-size="12" fill="#263238" text-anchor="start" font-weight="normal">7500</text>
+<text x="391" y="349" font-family="Arial,sans-serif" font-size="12" fill="#263238" text-anchor="end" font-weight="normal">carrier_type: ltl</text>
+<rect x="400" y="334" width="83.8" height="18" rx="2" fill="#247ba0"/>
+<text x="489.75509702272404" y="348" font-family="Arial,sans-serif" font-size="12" fill="#263238" text-anchor="start" font-weight="normal">7500</text>
+<text x="391" y="376" font-family="Arial,sans-serif" font-size="12" fill="#263238" text-anchor="end" font-weight="normal">carrier_type: parcel</text>
+<rect x="400" y="361" width="83.8" height="18" rx="2" fill="#247ba0"/>
+<text x="489.75509702272404" y="375" font-family="Arial,sans-serif" font-size="12" fill="#263238" text-anchor="start" font-weight="normal">7500</text>
+<text x="391" y="403" font-family="Arial,sans-serif" font-size="12" fill="#263238" text-anchor="end" font-weight="normal">carrier_type: rail</text>
+<rect x="400" y="388" width="83.8" height="18" rx="2" fill="#247ba0"/>
+<text x="489.75509702272404" y="402" font-family="Arial,sans-serif" font-size="12" fill="#263238" text-anchor="start" font-weight="normal">7500</text>
+<text x="391" y="430" font-family="Arial,sans-serif" font-size="12" fill="#263238" text-anchor="end" font-weight="normal">service_mode: ltl</text>
+<rect x="400" y="415" width="83.7" height="18" rx="2" fill="#247ba0"/>
+<text x="489.7439296764543" y="429" font-family="Arial,sans-serif" font-size="12" fill="#263238" text-anchor="start" font-weight="normal">7499</text>
+<text x="391" y="457" font-family="Arial,sans-serif" font-size="12" fill="#263238" text-anchor="end" font-weight="normal">service_mode: air</text>
+<rect x="400" y="442" width="74.5" height="18" rx="2" fill="#247ba0"/>
+<text x="480.4638649263365" y="456" font-family="Arial,sans-serif" font-size="12" fill="#263238" text-anchor="start" font-weight="normal">6668</text>
+<text x="391" y="484" font-family="Arial,sans-serif" font-size="12" fill="#263238" text-anchor="end" font-weight="normal">latest_event_type: picked_up</text>
+<rect x="400" y="469" width="62.6" height="18" rx="2" fill="#247ba0"/>
+<text x="468.6153105341885" y="483" font-family="Arial,sans-serif" font-size="12" fill="#263238" text-anchor="start" font-weight="normal">5607</text>
+<text x="391" y="511" font-family="Arial,sans-serif" font-size="12" fill="#263238" text-anchor="end" font-weight="normal">latest_event_type: label_created</text>
+<rect x="400" y="496" width="13.4" height="18" rx="2" fill="#247ba0"/>
+<text x="419.36731348482675" y="510" font-family="Arial,sans-serif" font-size="12" fill="#263238" text-anchor="start" font-weight="normal">1197</text>
+<text x="391" y="538" font-family="Arial,sans-serif" font-size="12" fill="#263238" text-anchor="end" font-weight="normal">last_observed_state: created</text>
+<rect x="400" y="523" width="13.4" height="18" rx="2" fill="#247ba0"/>
+<text x="419.36731348482675" y="537" font-family="Arial,sans-serif" font-size="12" fill="#263238" text-anchor="start" font-weight="normal">1197</text>
+</svg>

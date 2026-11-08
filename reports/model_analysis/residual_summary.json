@@ -1,0 +1,36 @@
+{
+  "test_rows": 7500,
+  "error_definition": "predicted_remaining_hours - target_remaining_hours; positive means ETA predicts later delivery than observed (overprediction)",
+  "mean_error_hours_prediction_bias": -0.0592954021247884,
+  "median_error_hours": 0.04150812774987145,
+  "mean_absolute_error_hours": 1.6038254051211118,
+  "median_absolute_error_hours": 1.3344629664982772,
+  "signed_error_percentiles_hours": {
+    "1": -5.388566792279242,
+    "5": -4.054263456886576,
+    "10": -2.9814647394917664,
+    "25": -1.184509888913298,
+    "50": 0.04150812774987145,
+    "75": 1.4911493051223044,
+    "90": 2.502022875807198,
+    "95": 2.927187457210012,
+    "99": 3.5425232537745863
+  },
+  "absolute_error_percentiles_hours": {
+    "50": 1.3344629664982772,
+    "75": 2.35580054835397,
+    "90": 3.387615618483852,
+    "95": 4.068731408139203,
+    "99": 5.388566792279244
+  },
+  "maximum_absolute_error_hours": 6.81890117129614,
+  "maximum_overprediction_hours": 4.120378848960321,
+  "maximum_underprediction_hours": -6.81890117129614,
+  "within_threshold_pct": {
+    "1": 39.733333333333334,
+    "2": 66.8,
+    "4": 94.52000000000001,
+    "6": 99.58666666666667
+  },
+  "saved_model_reproduction_max_abs_difference_hours": 7.105427357601002e-15
+}

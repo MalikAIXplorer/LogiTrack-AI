@@ -1,0 +1,208 @@
+{
+  "boolean_columns_treated_as_numeric_0_1": [
+    "service_reference_missing",
+    "carrier_reference_missing",
+    "weight_missing",
+    "latest_event_missing",
+    "pickup_scan_seen",
+    "weather_observation_missing",
+    "queue_wait_missing",
+    "queue_observation_missing"
+  ],
+  "categorical_columns": [
+    "service_mode",
+    "carrier_type",
+    "shipment_priority",
+    "latest_event_type",
+    "last_observed_state"
+  ],
+  "categorical_preprocessing": "most-frequent imputation then OneHotEncoder(handle_unknown='ignore'); fit on training split only",
+  "constant_columns_retained": [
+    "service_reference_missing",
+    "carrier_reference_missing",
+    "weight_missing",
+    "latest_event_missing",
+    "queue_wait_missing",
+    "queue_observation_missing"
+  ],
+  "dummy": {
+    "strategy": "median"
+  },
+  "feature_decision": "All declared operational predictors retained for this first baseline. Constants add no signal; correlated route/time fields are retained so later comparisons can measure their effect. Ridge L2 regularization mitigates, but does not remove, redundancy.",
+  "forbidden_sources_or_fields_excluded": [
+    "AnomalyAudit",
+    "AnomalyETAInputEvidence",
+    "AnomalyRouteSequence",
+    "AnomalyStateObservation",
+    "actual_delivery_time",
+    "ground_truth",
+    "ground_truth_label",
+    "issue_type",
+    "target_delivery_time",
+    "target_eligible",
+    "target_remaining_hours"
+  ],
+  "high_correlation_pairs_retained": [
+    {
+      "left": "journey_elapsed_minutes",
+      "pearson_r": 1.0,
+      "right": "minutes_since_pickup_scan"
+    },
+    {
+      "left": "planned_route_distance_km",
+      "pearson_r": 0.995249825195825,
+      "right": "planned_route_hours"
+    },
+    {
+      "left": "planned_route_distance_km",
+      "pearson_r": 0.9950193403860994,
+      "right": "remaining_scheduled_hours"
+    },
+    {
+      "left": "planned_route_distance_km",
+      "pearson_r": 1.0,
+      "right": "remaining_scheduled_distance_km"
+    },
+    {
+      "left": "planned_route_hours",
+      "pearson_r": 0.9998399260198934,
+      "right": "remaining_scheduled_hours"
+    },
+    {
+      "left": "planned_route_hours",
+      "pearson_r": 0.9952498251958252,
+      "right": "remaining_scheduled_distance_km"
+    },
+    {
+      "left": "planned_leg_count",
+      "pearson_r": 1.0,
+      "right": "remaining_scheduled_leg_count"
+    },
+    {
+      "left": "remaining_scheduled_hours",
+      "pearson_r": 0.9950193403860994,
+      "right": "remaining_scheduled_distance_km"
+    },
+    {
+      "left": "latest_event_age_minutes",
+      "pearson_r": 0.9742482521264656,
+      "right": "minutes_since_pickup_scan"
+    }
+  ],
+  "high_correlation_threshold_abs_pearson_r": 0.95,
+  "identifier_columns_excluded": [
+    "shipment_id",
+    "eta_id",
+    "predicted_at"
+  ],
+  "numeric_columns": [
+    "service_target_transit_hours",
+    "service_reference_missing",
+    "carrier_reference_missing",
+    "shipment_weight_kg",
+    "weight_missing",
+    "journey_elapsed_minutes",
+    "planned_route_distance_km",
+    "planned_route_hours",
+    "planned_leg_count",
+    "remaining_scheduled_leg_count",
+    "remaining_scheduled_hours",
+    "remaining_scheduled_distance_km",
+    "eligible_event_count",
+    "latest_event_missing",
+    "latest_event_age_minutes",
+    "latest_event_leg_number",
+    "pickup_scan_seen",
+    "minutes_since_pickup_scan",
+    "weather_observation_count",
+    "active_weather_disruption_count",
+    "max_active_weather_severity",
+    "weather_observation_missing",
+    "queue_observation_count",
+    "max_observed_queue_length",
+    "mean_observed_wait_minutes",
+    "queue_wait_missing",
+    "queue_observation_missing"
+  ],
+  "numeric_preprocessing": "median imputation then StandardScaler; fit on training split only",
+  "predictor_columns": [
+    "service_mode",
+    "service_target_transit_hours",
+    "service_reference_missing",
+    "carrier_type",
+    "carrier_reference_missing",
+    "shipment_priority",
+    "shipment_weight_kg",
+    "weight_missing",
+    "journey_elapsed_minutes",
+    "planned_route_distance_km",
+    "planned_route_hours",
+    "planned_leg_count",
+    "remaining_scheduled_leg_count",
+    "remaining_scheduled_hours",
+    "remaining_scheduled_distance_km",
+    "eligible_event_count",
+    "latest_event_type",
+    "latest_event_missing",
+    "last_observed_state",
+    "latest_event_age_minutes",
+    "latest_event_leg_number",
+    "pickup_scan_seen",
+    "minutes_since_pickup_scan",
+    "weather_observation_count",
+    "active_weather_disruption_count",
+    "max_active_weather_severity",
+    "weather_observation_missing",
+    "queue_observation_count",
+    "max_observed_queue_length",
+    "mean_observed_wait_minutes",
+    "queue_wait_missing",
+    "queue_observation_missing"
+  ],
+  "predictor_count": 32,
+  "ridge": {
+    "alpha": 1.0
+  },
+  "target": "target_remaining_hours",
+  "target_definition": "target_remaining_hours = (Shipment.actual_delivery_time - predicted_at) in hours; used only as y, never in X.",
+  "target_rows_read": [
+    "shipment_id",
+    "eta_id",
+    "target_remaining_hours"
+  ],
+  "test_usage": "test rows are not used for fitting, preprocessing, selection, or feature decisions; only selected_model is predicted/scored on test after validation selection.",
+  "type_by_predictor": {
+    "active_weather_disruption_count": "integer",
+    "carrier_reference_missing": "boolean",
+    "carrier_type": "category",
+    "eligible_event_count": "integer",
+    "journey_elapsed_minutes": "float",
+    "last_observed_state": "category",
+    "latest_event_age_minutes": "float",
+    "latest_event_leg_number": "integer",
+    "latest_event_missing": "boolean",
+    "latest_event_type": "category",
+    "max_active_weather_severity": "integer",
+    "max_observed_queue_length": "integer",
+    "mean_observed_wait_minutes": "float",
+    "minutes_since_pickup_scan": "float",
+    "pickup_scan_seen": "boolean",
+    "planned_leg_count": "integer",
+    "planned_route_distance_km": "float",
+    "planned_route_hours": "float",
+    "queue_observation_count": "integer",
+    "queue_observation_missing": "boolean",
+    "queue_wait_missing": "boolean",
+    "remaining_scheduled_distance_km": "float",
+    "remaining_scheduled_hours": "float",
+    "remaining_scheduled_leg_count": "integer",
+    "service_mode": "category",
+    "service_reference_missing": "boolean",
+    "service_target_transit_hours": "float",
+    "shipment_priority": "category",
+    "shipment_weight_kg": "float",
+    "weather_observation_count": "integer",
+    "weather_observation_missing": "boolean",
+    "weight_missing": "boolean"
+  }
+}

@@ -1,0 +1,50 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+*.sqlite
+*.sqlite3
+*.db
+.env
+data/generated/
+!data/.gitkeep
+.DS_Store
+
+# Datasets and generated data
+/data/*
+!/data/.gitkeep
+
+# Python cache
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Temporary test directories
+.pytest-*/
+.pytest-*/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# IDE and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Secrets and environment variables
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
+
+# Generated prediction outputs
+/reports/modeling/eta_v1/predictions.csv
+/reports/realistic_v2/predictions.csv

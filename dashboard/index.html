@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0f172a">
+  <meta name="description" content="LogiTrack AI shipment ETA prediction control tower">
+  <title>LogiTrack AI — Shipment Intelligence</title>
+  <link rel="stylesheet" href="/assets/dashboard.css">
+  <script src="/assets/dashboard.js" defer></script>
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar" aria-label="Main navigation">
+      <a class="brand" href="#overview" data-page-link="overview" aria-label="LogiTrack AI overview">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 32 32" fill="none"><path d="M5 10.5 16 4l11 6.5v11L16 28 5 21.5v-11Z" stroke="currentColor" stroke-width="1.8"/><path d="m5.5 10.7 10.5 6.2 10.5-6.2M16 17v10.5M10 7.5l11 6.4v4.4" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><circle cx="21" cy="18.5" r="2.1" fill="currentColor"/></svg>
+        </span>
+        <span class="brand-copy"><strong>LogiTrack</strong><small>AI CONTROL TOWER</small></span>
+      </a>
+      <div class="nav-label">WORKSPACE</div>
+      <nav class="side-nav">
+        <a href="#overview" class="nav-link active" data-page-link="overview"><span class="nav-icon">◫</span><span>Overview</span></a>
+        <a href="#prediction" class="nav-link" data-page-link="prediction"><span class="nav-icon">⌁</span><span>ETA Prediction</span><span class="nav-pill">AI</span></a>
+      </nav>
+      <div class="nav-label nav-label-spaced">MONITORING</div>
+      <nav class="side-nav">
+        <a href="#model" class="nav-link" data-page-link="model"><span class="nav-icon">▥</span><span>Model Information</span></a>
+        <a href="#system" class="nav-link" data-page-link="system"><span class="nav-icon">◉</span><span>System Status</span></a>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="sidebar-note"><span class="note-dot"></span><div><strong>Model environment</strong><small>Synthetic · realistic_v2</small></div></div>
+        <div class="sidebar-foot">LOGITRACK AI <span>•</span> DEMO WORKSPACE</div>
+      </div>
+    </aside>
+
+    <main class="main-area">
+      <header class="topbar">
+        <div class="topbar-left">
+          <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span><span></span></button>
+          <div><div class="breadcrumb">Workspace <span>/</span> <strong id="page-crumb">Overview</strong></div><h1 id="page-title">Overview</h1></div>
+        </div>
+        <div class="topbar-right">
+          <div class="connection-chip" id="api-status" data-state="loading"><span class="status-dot"></span><span class="status-copy">Checking API</span></div>
+          <div class="topbar-divider"></div>
+          <div class="model-chip"><span class="model-chip-icon">R</span><span><strong>Ridge Regression</strong><small>ETA MODEL</small></span></div>
+        </div>
+      </header>
+
+      <div class="content-wrap">
+        <section class="page-section active" id="page-overview" aria-labelledby="overview-heading">
+          <div class="welcome-row">
+            <div><div class="eyebrow"><span class="eyebrow-line"></span> LOGISTICS INTELLIGENCE</div><h2 id="overview-heading">Logistics Intelligence Dashboard</h2><p class="lead">Turn shipment signals into a clearer view of time remaining on the journey.</p></div>
+            <a class="button button-primary" href="#prediction" data-page-link="prediction"><span class="button-icon">⌁</span> Predict Shipment ETA <span class="arrow">→</span></a>
+          </div>
+          <div class="notice notice-blue"><span class="notice-icon">i</span><p><strong>Evaluation snapshot, not live operations.</strong> The figures below describe the synthetic realistic_v2 training dataset and its held-out model evaluation. They are not live shipment counts or service guarantees.</p></div>
+          <div class="kpi-grid">
+            <article class="kpi-card"><div class="kpi-head"><span>Training shipments</span><span class="kpi-icon blue">▤</span></div><div class="kpi-value">50,000</div><div class="kpi-foot"><span class="tiny-badge">SYNTHETIC DATA</span><span>realistic_v2</span></div></article>
+            <article class="kpi-card"><div class="kpi-head"><span>Model predictors</span><span class="kpi-icon violet">⌘</span></div><div class="kpi-value">40</div><div class="kpi-foot"><span class="tiny-badge">POINT-IN-TIME</span><span>Operational inputs</span></div></article>
+            <article class="kpi-card"><div class="kpi-head"><span>Test MAE</span><span class="kpi-icon green">↔</span></div><div class="kpi-value">1.0091 <em>hrs</em></div><div class="kpi-foot"><span class="tiny-badge">HELD-OUT TEST</span><span>Mean absolute error</span></div></article>
+            <article class="kpi-card"><div class="kpi-head"><span>Test R²</span><span class="kpi-icon amber">◷</span></div><div class="kpi-value">0.9866</div><div class="kpi-foot"><span class="tiny-badge">HELD-OUT TEST</span><span>Explained variation</span></div></article>
+          </div>
+          <div class="overview-grid">
+            <article class="panel journey-panel">
+              <div class="panel-heading"><div><div class="eyebrow">HOW IT WORKS</div><h3>From shipment signals to an ETA estimate</h3></div><span class="panel-kicker">INFERENCE FLOW</span></div>
+              <p class="panel-intro">The fitted Ridge pipeline combines current operational features into an estimate of remaining delivery time.</p>
+              <div class="flow">
+                <div class="flow-step"><span class="flow-number">01</span><span class="flow-icon">▧</span><div><strong>Operational snapshot</strong><small>Route plan, scans, carrier history, weather and queue signals.</small></div></div>
+                <span class="flow-connector"></span>
+                <div class="flow-step"><span class="flow-number">02</span><span class="flow-icon">⌘</span><div><strong>Point-in-time features</strong><small>Signals are constrained to what was available at prediction time.</small></div></div>
+                <span class="flow-connector"></span>
+                <div class="flow-step"><span class="flow-number">03</span><span class="flow-icon">◷</span><div><strong>Remaining time estimate</strong><small>A model estimate in hours, returned by the saved API pipeline.</small></div></div>
+              </div>
+            </article>
+            <article class="panel callout-panel">
+              <div class="callout-icon"><span>↗</span></div><div class="eyebrow">READY TO EXPLORE?</div><h3>Estimate time remaining</h3><p>Enter a shipment feature snapshot or load a representative synthetic example to see the ETA model in action.</p><a class="text-link" href="#prediction" data-page-link="prediction">Open ETA Prediction <span>→</span></a>
+              <div class="callout-foot"><span class="green-check">✓</span> Connected to the saved Ridge model</div>
+            </article>
+          </div>
+          <div class="bottom-disclaimer"><span class="info-outline">i</span><span>Model quality is measured on synthetic data only. Real-world accuracy has not been established.</span><a href="#model" data-page-link="model">View model details</a></div>
+        </section>
+
+        <section class="page-section" id="page-prediction" aria-labelledby="prediction-heading">
+          <div class="page-intro-row"><div><div class="eyebrow"><span class="eyebrow-line"></span> INFERENCE WORKSPACE</div><h2 id="prediction-heading">Shipment ETA Prediction</h2><p class="lead">Provide a point-in-time feature snapshot to estimate remaining delivery time.</p></div><span class="model-stamp"><span class="model-chip-icon">R</span> Ridge · 40 predictors</span></div>
+          <div class="notice notice-amber"><span class="notice-icon">!</span><p><strong>Synthetic-data model.</strong> Predictions are demonstrations and are not delivery commitments. Use only features available at the prediction timestamp.</p></div>
+          <div class="form-toolbar"><div class="demo-label"><span class="demo-indicator"></span><div><strong id="sample-status">No sample loaded</strong><small id="sample-detail">Load a real feature row from the realistic_v2 dataset or enter your own snapshot.</small></div></div><div class="toolbar-actions"><button type="button" class="button button-secondary" id="load-demo"><span>▣</span> Load Demo Shipment</button><button type="button" class="button button-quiet" id="reset-form">Reset Form</button></div></div>
+          <form id="prediction-form" novalidate>
+            <div id="feature-groups" class="feature-groups"><div class="loading-card">Loading model feature contract…</div></div>
+            <div class="submit-row"><div class="submit-help"><span class="info-outline">i</span><span>All 40 predictor fields are sent to the existing API. Target and anomaly fields are not accepted.</span></div><div class="submit-actions"><button type="button" class="button button-secondary" id="reset-form-bottom">Reset Form</button><button type="submit" class="button button-primary" id="submit-prediction"><span class="button-icon">⌁</span> Generate ETA <span class="arrow">→</span></button></div></div>
+          </form>
+          <div id="form-error" class="form-error" role="alert" hidden></div>
+          <section id="prediction-result" class="result-card" aria-live="polite" hidden>
+            <div class="result-top"><div><div class="eyebrow"><span class="result-check">✓</span> PREDICTION COMPLETE</div><h3>Estimated time remaining</h3><p>Model output from the submitted operational snapshot.</p></div><span class="result-model">RIDGE REGRESSION</span></div>
+            <div class="result-main"><div class="result-hours"><strong id="result-hours">—</strong><span>hours</span></div><div class="result-conversion" id="result-conversion">—</div></div>
+            <div class="result-bottom"><div class="result-summary"><span class="summary-label">INPUT SUMMARY</span><span id="result-summary">—</span></div><p class="result-disclaimer">This estimate comes from a model trained on synthetic data. It is not a delivery guarantee or a measure of confidence.</p></div>
+          </section>
+        </section>
+
+        <section class="page-section" id="page-model" aria-labelledby="model-heading">
+          <div class="page-intro-row"><div><div class="eyebrow"><span class="eyebrow-line"></span> MODEL CARD</div><h2 id="model-heading">Model Information</h2><p class="lead">A transparent summary of the model and its evaluation set.</p></div><span class="model-stamp"><span class="model-chip-icon">R</span> Ridge Regression</span></div>
+          <div class="notice notice-amber"><span class="notice-icon">!</span><p><strong>Evaluation is synthetic.</strong> Real-world predictive performance has not been established; the reported scores do not imply production readiness.</p></div>
+          <div class="model-summary-grid">
+            <article class="panel model-overview"><div class="eyebrow">SELECTED MODEL</div><div class="model-name-row"><span class="model-large-icon">R</span><div><h3>Ridge Regression</h3><span class="model-subtitle">Regularized linear regression</span></div></div><div class="model-property"><span>Dataset</span><strong>realistic_v2 · synthetic</strong></div><div class="model-property"><span>Prediction target</span><strong>Remaining delivery time</strong></div><div class="model-property"><span>Training predictors</span><strong>40 operational features</strong></div><div class="model-property"><span>Preprocessing</span><strong>Imputation · scaling · one-hot encoding</strong></div></article>
+            <article class="panel metric-panel"><div class="panel-heading"><div><div class="eyebrow">HELD-OUT EVALUATION</div><h3>Test set performance</h3></div><span class="tiny-badge">7,500 SHIPMENTS</span></div><div class="metric-row"><div class="metric-label"><strong>MAE</strong><small>Average absolute error</small></div><div class="metric-number">1.0091 <small>hours</small></div></div><div class="metric-row"><div class="metric-label"><strong>RMSE</strong><small>Penalizes larger errors more</small></div><div class="metric-number">1.4125 <small>hours</small></div></div><div class="metric-row"><div class="metric-label"><strong>R²</strong><small>Variation explained on test data</small></div><div class="metric-number">0.9866</div></div><p class="metric-note">Lower MAE and RMSE mean smaller errors. R² is unitless and summarizes fit; it does not guarantee accuracy for an individual shipment.</p></article>
+          </div>
+          <div class="sample-size-grid"><div class="sample-size-card"><span>Training samples</span><strong>35,000</strong><small>Used to fit the model and preprocessing</small></div><div class="sample-size-card"><span>Validation samples</span><strong>7,500</strong><small>Used to select the model</small></div><div class="sample-size-card"><span>Test samples</span><strong>7,500</strong><small>Held out for final evaluation</small></div></div>
+          <article class="panel model-caution"><span class="caution-icon">i</span><div><strong>What these numbers mean</strong><p>These metrics describe a chronological held-out split from a synthetic logistics dataset. Generated patterns may be cleaner or more regular than real operations. Validate with representative, governed operational data before using estimates in decisions.</p></div></article>
+        </section>
+
+        <section class="page-section" id="page-system" aria-labelledby="system-heading">
+          <div class="page-intro-row"><div><div class="eyebrow"><span class="eyebrow-line"></span> PLATFORM MONITORING</div><h2 id="system-heading">System Status</h2><p class="lead">Current API health and model metadata reported by the backend.</p></div><button class="button button-secondary" id="refresh-status"><span>↻</span> Refresh status</button></div>
+          <div class="status-grid">
+            <article class="panel status-panel"><div class="panel-heading"><div><div class="eyebrow">API CONNECTION</div><h3>Backend health</h3></div><span class="status-icon-wrap" id="health-icon">◉</span></div><div class="system-status-line"><span class="large-status-dot" id="health-dot"></span><strong id="health-label">Checking…</strong></div><p id="health-description">Requesting current health from GET /health.</p><button class="text-button" data-refresh>Refresh health</button></article>
+            <article class="panel status-panel"><div class="panel-heading"><div><div class="eyebrow">MODEL SERVICE</div><h3>Loaded model metadata</h3></div><span class="model-large-icon small">R</span></div><div id="model-metadata" class="metadata-list"><div class="metadata-loading">Loading model metadata…</div></div></article>
+          </div>
+          <div class="notice notice-muted"><span class="notice-icon">i</span><p>This page reports the live response from the API health and metadata endpoints. It does not report uptime, latency, or live shipment throughput.</p></div>
+        </section>
+        <footer class="app-footer"><span>LogiTrack AI</span><span>Shipment ETA Prediction System</span><span class="footer-synthetic">SYNTHETIC MODEL DEMO</span></footer>
+      </div>
+    </main>
+  </div>
+  <div class="mobile-scrim" id="mobile-scrim"></div>
+</body>
+</html>

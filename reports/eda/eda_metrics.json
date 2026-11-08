@@ -1,0 +1,577 @@
+{
+  "feature_rows": 50000,
+  "target_rows": 50000,
+  "feature_columns": 35,
+  "predictor_count": 32,
+  "matched_pairs": 50000,
+  "feature_duplicate_pairs": 0,
+  "target_duplicate_pairs": 0,
+  "unique_shipments": 50000,
+  "target_stats": {
+    "n": 50000,
+    "mean": 21.651601819859998,
+    "median": 20.686667,
+    "std_sample": 11.656313765575737,
+    "min": 1.995,
+    "max": 47.66,
+    "percentiles": {
+      "1": 2.678333,
+      "5": 4.241667,
+      "10": 6.08,
+      "25": 11.543333,
+      "50": 20.686667,
+      "75": 30.7041665,
+      "90": 37.42,
+      "95": 40.51,
+      "99": 45.743333
+    },
+    "iqr": 19.1608335,
+    "lower_fence": -17.19791725,
+    "upper_fence": 59.44541675,
+    "tukey_outliers": 0,
+    "tukey_outlier_pct": 0.0,
+    "skew": 0.1969105352283428
+  },
+  "target_eligible_counts": {
+    "1": 50000
+  },
+  "ground_truth_counts": {
+    "rows": 50000,
+    "on_time": 37500,
+    "delayed": 12500,
+    "invalid_binary_rows": 0,
+    "label_sum_not_one": 0
+  },
+  "ground_truth_key_match": {
+    "matched": 50000,
+    "features_only": 0,
+    "truth_only": 0,
+    "duplicate_truth_rows": 0
+  },
+  "missing_predictors": {
+    "service_mode": 0,
+    "service_target_transit_hours": 0,
+    "service_reference_missing": 0,
+    "carrier_type": 0,
+    "carrier_reference_missing": 0,
+    "shipment_priority": 0,
+    "shipment_weight_kg": 0,
+    "weight_missing": 0,
+    "journey_elapsed_minutes": 0,
+    "planned_route_distance_km": 0,
+    "planned_route_hours": 0,
+    "planned_leg_count": 0,
+    "remaining_scheduled_leg_count": 0,
+    "remaining_scheduled_hours": 0,
+    "remaining_scheduled_distance_km": 0,
+    "eligible_event_count": 0,
+    "latest_event_type": 0,
+    "latest_event_missing": 0,
+    "last_observed_state": 0,
+    "latest_event_age_minutes": 0,
+    "latest_event_leg_number": 1197,
+    "pickup_scan_seen": 0,
+    "minutes_since_pickup_scan": 2605,
+    "weather_observation_count": 0,
+    "active_weather_disruption_count": 0,
+    "max_active_weather_severity": 0,
+    "weather_observation_missing": 0,
+    "queue_observation_count": 0,
+    "max_observed_queue_length": 0,
+    "mean_observed_wait_minutes": 0,
+    "queue_wait_missing": 0,
+    "queue_observation_missing": 0
+  },
+  "categorical_distributions": {
+    "service_mode": {
+      "ftl": 7500,
+      "parcel": 7500,
+      "last_mile": 7500,
+      "ltl": 7499,
+      "air": 6668,
+      "ocean": 6667,
+      "rail": 6666
+    },
+    "carrier_type": {
+      "ocean": 7500,
+      "ftl": 7500,
+      "ltl": 7500,
+      "parcel": 7500,
+      "rail": 7500,
+      "air": 7500,
+      "last_mile": 5000
+    },
+    "shipment_priority": {
+      "standard": 25000,
+      "low": 12500,
+      "high": 12500
+    },
+    "latest_event_type": {
+      "departed": 43196,
+      "picked_up": 5607,
+      "label_created": 1197
+    },
+    "last_observed_state": {
+      "in_transit": 48803,
+      "created": 1197
+    }
+  },
+  "numeric_summary": {
+    "service_target_transit_hours": {
+      "missing": 0,
+      "unique": 7,
+      "min": 32.0,
+      "p01": 32.0,
+      "median": 56.0,
+      "mean": 55.60016,
+      "std": 16.226643339072965,
+      "p99": 80.0,
+      "max": 80.0
+    },
+    "service_reference_missing": {
+      "missing": 0,
+      "unique": 1,
+      "min": 0.0,
+      "p01": 0.0,
+      "median": 0.0,
+      "mean": 0.0,
+      "std": 0.0,
+      "p99": 0.0,
+      "max": 0.0
+    },
+    "carrier_reference_missing": {
+      "missing": 0,
+      "unique": 1,
+      "min": 0.0,
+      "p01": 0.0,
+      "median": 0.0,
+      "mean": 0.0,
+      "std": 0.0,
+      "p99": 0.0,
+      "max": 0.0
+    },
+    "shipment_weight_kg": {
+      "missing": 0,
+      "unique": 38262,
+      "min": 0.2,
+      "p01": 9.28,
+      "median": 451.055,
+      "mean": 450.56418759999997,
+      "std": 260.52536846509264,
+      "p99": 890.6602,
+      "max": 899.98
+    },
+    "weight_missing": {
+      "missing": 0,
+      "unique": 1,
+      "min": 0.0,
+      "p01": 0.0,
+      "median": 0.0,
+      "mean": 0.0,
+      "std": 0.0,
+      "p99": 0.0,
+      "max": 0.0
+    },
+    "journey_elapsed_minutes": {
+      "missing": 0,
+      "unique": 11,
+      "min": 294.9,
+      "p01": 294.9,
+      "median": 360.0,
+      "mean": 355.2760109999999,
+      "std": 14.249646442152645,
+      "p99": 360.0,
+      "max": 360.0
+    },
+    "planned_route_distance_km": {
+      "missing": 0,
+      "unique": 59,
+      "min": 230.47,
+      "p01": 230.47,
+      "median": 1613.375,
+      "mean": 1587.1910392,
+      "std": 850.6126214271893,
+      "p99": 3241.0,
+      "max": 3241.0
+    },
+    "planned_route_hours": {
+      "missing": 0,
+      "unique": 79,
+      "min": 3.66,
+      "p01": 3.66,
+      "median": 21.17,
+      "mean": 22.344515999999995,
+      "std": 11.610189279578785,
+      "p99": 46.19,
+      "max": 47.61
+    },
+    "planned_leg_count": {
+      "missing": 0,
+      "unique": 3,
+      "min": 1.0,
+      "p01": 1.0,
+      "median": 2.0,
+      "mean": 2.00002,
+      "std": 0.8165006632371228,
+      "p99": 3.0,
+      "max": 3.0
+    },
+    "remaining_scheduled_leg_count": {
+      "missing": 0,
+      "unique": 3,
+      "min": 1.0,
+      "p01": 1.0,
+      "median": 2.0,
+      "mean": 2.00002,
+      "std": 0.8165006632371228,
+      "p99": 3.0,
+      "max": 3.0
+    },
+    "remaining_scheduled_hours": {
+      "missing": 0,
+      "unique": 79,
+      "min": 2.745,
+      "p01": 2.745,
+      "median": 19.17,
+      "mean": 20.42324562,
+      "std": 11.49318671863769,
+      "p99": 44.19,
+      "max": 45.61
+    },
+    "remaining_scheduled_distance_km": {
+      "missing": 0,
+      "unique": 59,
+      "min": 230.47,
+      "p01": 230.47,
+      "median": 1613.375,
+      "mean": 1587.1910392,
+      "std": 850.6126214271893,
+      "p99": 3241.0,
+      "max": 3241.0
+    },
+    "eligible_event_count": {
+      "missing": 0,
+      "unique": 4,
+      "min": 1.0,
+      "p01": 1.0,
+      "median": 3.0,
+      "mean": 2.87528,
+      "std": 0.5305568314620294,
+      "p99": 4.0,
+      "max": 4.0
+    },
+    "latest_event_missing": {
+      "missing": 0,
+      "unique": 1,
+      "min": 0.0,
+      "p01": 0.0,
+      "median": 0.0,
+      "mean": 0.0,
+      "std": 0.0,
+      "p99": 0.0,
+      "max": 0.0
+    },
+    "latest_event_age_minutes": {
+      "missing": 0,
+      "unique": 33,
+      "min": 44.9,
+      "p01": 44.9,
+      "median": 110.0,
+      "mean": 112.38241100000002,
+      "std": 39.70940454493451,
+      "p99": 360.0,
+      "max": 360.0
+    },
+    "latest_event_leg_number": {
+      "missing": 1197,
+      "unique": 1,
+      "min": 1.0,
+      "p01": 1.0,
+      "median": 1.0,
+      "mean": 1.0,
+      "std": 0.0,
+      "p99": 1.0,
+      "max": 1.0
+    },
+    "pickup_scan_seen": {
+      "missing": 0,
+      "unique": 2,
+      "min": 0.0,
+      "p01": 0.0,
+      "median": 1.0,
+      "mean": 0.9479,
+      "std": 0.222230910837252,
+      "p99": 1.0,
+      "max": 1.0
+    },
+    "minutes_since_pickup_scan": {
+      "missing": 2605,
+      "unique": 11,
+      "min": 54.9,
+      "p01": 54.9,
+      "median": 120.0,
+      "mean": 115.47099694060556,
+      "std": 13.948563377408915,
+      "p99": 120.0,
+      "max": 120.0
+    },
+    "weather_observation_count": {
+      "missing": 0,
+      "unique": 19,
+      "min": 0.0,
+      "p01": 0.0,
+      "median": 2.0,
+      "mean": 2.97604,
+      "std": 2.9297572575132844,
+      "p99": 12.0,
+      "max": 18.0
+    },
+    "active_weather_disruption_count": {
+      "missing": 0,
+      "unique": 3,
+      "min": 0.0,
+      "p01": 0.0,
+      "median": 0.0,
+      "mean": 0.02042,
+      "std": 0.14339956369772322,
+      "p99": 1.0,
+      "max": 2.0
+    },
+    "max_active_weather_severity": {
+      "missing": 0,
+      "unique": 6,
+      "min": 0.0,
+      "p01": 0.0,
+      "median": 0.0,
+      "mean": 0.06252,
+      "std": 0.4753270119774031,
+      "p99": 3.0,
+      "max": 5.0
+    },
+    "weather_observation_missing": {
+      "missing": 0,
+      "unique": 2,
+      "min": 0.0,
+      "p01": 0.0,
+      "median": 0.0,
+      "mean": 0.21416,
+      "std": 0.41024244097509893,
+      "p99": 1.0,
+      "max": 1.0
+    },
+    "queue_observation_count": {
+      "missing": 0,
+      "unique": 3,
+      "min": 1.0,
+      "p01": 1.0,
+      "median": 2.0,
+      "mean": 1.9988,
+      "std": 0.8165365237623439,
+      "p99": 3.0,
+      "max": 3.0
+    },
+    "max_observed_queue_length": {
+      "missing": 0,
+      "unique": 95,
+      "min": 5.0,
+      "p01": 7.0,
+      "median": 70.0,
+      "mean": 65.19712,
+      "std": 25.034564871280786,
+      "p99": 99.0,
+      "max": 99.0
+    },
+    "mean_observed_wait_minutes": {
+      "missing": 0,
+      "unique": 364,
+      "min": 12.0,
+      "p01": 16.8,
+      "median": 124.8,
+      "mean": 124.805032,
+      "std": 51.467549909169456,
+      "p99": 232.8,
+      "max": 237.6
+    },
+    "queue_wait_missing": {
+      "missing": 0,
+      "unique": 1,
+      "min": 0.0,
+      "p01": 0.0,
+      "median": 0.0,
+      "mean": 0.0,
+      "std": 0.0,
+      "p99": 0.0,
+      "max": 0.0
+    },
+    "queue_observation_missing": {
+      "missing": 0,
+      "unique": 1,
+      "min": 0.0,
+      "p01": 0.0,
+      "median": 0.0,
+      "mean": 0.0,
+      "std": 0.0,
+      "p99": 0.0,
+      "max": 0.0
+    }
+  },
+  "constant_predictors": [
+    "service_reference_missing",
+    "carrier_reference_missing",
+    "weight_missing",
+    "latest_event_missing",
+    "queue_wait_missing",
+    "queue_observation_missing"
+  ],
+  "high_correlations": [
+    {
+      "a": "journey_elapsed_minutes",
+      "b": "minutes_since_pickup_scan",
+      "r": 1.0
+    },
+    {
+      "a": "planned_route_distance_km",
+      "b": "remaining_scheduled_distance_km",
+      "r": 1.0
+    },
+    {
+      "a": "planned_leg_count",
+      "b": "remaining_scheduled_leg_count",
+      "r": 1.0
+    },
+    {
+      "a": "planned_route_hours",
+      "b": "remaining_scheduled_hours",
+      "r": 0.9998399260198934
+    },
+    {
+      "a": "planned_route_hours",
+      "b": "remaining_scheduled_distance_km",
+      "r": 0.9952498251958252
+    },
+    {
+      "a": "planned_route_distance_km",
+      "b": "planned_route_hours",
+      "r": 0.995249825195825
+    },
+    {
+      "a": "planned_route_distance_km",
+      "b": "remaining_scheduled_hours",
+      "r": 0.9950193403860994
+    },
+    {
+      "a": "remaining_scheduled_hours",
+      "b": "remaining_scheduled_distance_km",
+      "r": 0.9950193403860994
+    },
+    {
+      "a": "latest_event_age_minutes",
+      "b": "minutes_since_pickup_scan",
+      "r": 0.9742482521264656
+    }
+  ],
+  "range_violations": {
+    "service_target_transit_hours": 0,
+    "shipment_weight_kg": 0,
+    "journey_elapsed_minutes": 0,
+    "planned_route_distance_km": 0,
+    "planned_route_hours": 0,
+    "planned_leg_count": 0,
+    "remaining_scheduled_leg_count": 0,
+    "remaining_scheduled_hours": 0,
+    "remaining_scheduled_distance_km": 0,
+    "eligible_event_count": 0,
+    "latest_event_age_minutes": 0,
+    "latest_event_leg_number": 0,
+    "minutes_since_pickup_scan": 0,
+    "weather_observation_count": 0,
+    "active_weather_disruption_count": 0,
+    "max_active_weather_severity": 0,
+    "queue_observation_count": 0,
+    "max_observed_queue_length": 0,
+    "mean_observed_wait_minutes": 0
+  },
+  "binary_flag_violations": {
+    "service_reference_missing": 0,
+    "carrier_reference_missing": 0,
+    "weight_missing": 0,
+    "latest_event_missing": 0,
+    "pickup_scan_seen": 0,
+    "weather_observation_missing": 0,
+    "queue_wait_missing": 0,
+    "queue_observation_missing": 0
+  },
+  "leakage": {
+    "metadata_in_predictors": [],
+    "outcome_fields_in_feature_file": [],
+    "anomaly_fields_in_feature_file": [],
+    "forbidden_predictors": [],
+    "excluded_sources": [
+      "AnomalyAudit",
+      "AnomalyETAInputEvidence",
+      "AnomalyRouteSequence",
+      "AnomalyStateObservation",
+      "DelayReason",
+      "ground_truth"
+    ],
+    "predictors_clean": true
+  },
+  "time_split": {
+    "train_rows": 35000,
+    "validation_rows": 7500,
+    "test_rows": 7500,
+    "train_end": "2026-07-30T09:50:00+00:00",
+    "validation_end": "2026-09-13T02:58:54+00:00",
+    "train_shipments": 35000,
+    "validation_shipments": 7500,
+    "test_shipments": 7500,
+    "shipment_overlap": 0,
+    "predicted_at_min": "2026-01-01T05:43:54+00:00",
+    "predicted_at_max": "2026-10-28T05:56:00+00:00"
+  },
+  "predictor_tukey_outlier_counts": {
+    "journey_elapsed_minutes": {
+      "count": 6667,
+      "lower_fence": 360.0,
+      "upper_fence": 360.0
+    },
+    "eligible_event_count": {
+      "count": 11261,
+      "lower_fence": 3.0,
+      "upper_fence": 3.0
+    },
+    "latest_event_age_minutes": {
+      "count": 12419,
+      "lower_fence": 110.0,
+      "upper_fence": 110.0
+    },
+    "minutes_since_pickup_scan": {
+      "count": 6131,
+      "lower_fence": 120.0,
+      "upper_fence": 120.0
+    },
+    "weather_observation_count": {
+      "count": 2961,
+      "lower_fence": -3.5,
+      "upper_fence": 8.5
+    },
+    "active_weather_disruption_count": {
+      "count": 1007,
+      "lower_fence": 0.0,
+      "upper_fence": 0.0
+    },
+    "max_active_weather_severity": {
+      "count": 1007,
+      "lower_fence": 0.0,
+      "upper_fence": 0.0
+    }
+  },
+  "weather_observation_counts": {
+    "active_disruption_count": {
+      "0": 48993,
+      "1": 993,
+      "2": 14
+    },
+    "no_observation": 10708
+  }
+}

@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="345" viewBox="0 0 1000 345"><rect width="100%" height="100%" fill="white"/>
+<text x="500.0" y="34" font-family="Arial,sans-serif" font-size="20" fill="#17324d" text-anchor="middle" font-weight="bold">Numerical predictor pairs with |r| ≥ 0.95</text>
+<text x="391" y="79" font-family="Arial,sans-serif" font-size="12" fill="#263238" text-anchor="end" font-weight="normal">journey_elapsed_minutes × minutes_since_pickup_scan (r=1.000)</text>
+<rect x="400" y="64" width="545.0" height="18" rx="2" fill="#247ba0"/>
+<text x="951.0" y="78" font-family="Arial,sans-serif" font-size="12" fill="#263238" text-anchor="start" font-weight="normal">1</text>
+<text x="391" y="106" font-family="Arial,sans-serif" font-size="12" fill="#263238" text-anchor="end" font-weight="normal">planned_route_distance_km × remaining_scheduled_distance_km (r=1.000)</text>
+<rect x="400" y="91" width="545.0" height="18" rx="2" fill="#247ba0"/>
+<text x="951.0" y="105" font-family="Arial,sans-serif" font-size="12" fill="#263238" text-anchor="start" font-weight="normal">1</text>
+<text x="391" y="133" font-family="Arial,sans-serif" font-size="12" fill="#263238" text-anchor="end" font-weight="normal">planned_leg_count × remaining_scheduled_leg_count (r=1.000)</text>
+<rect x="400" y="118" width="545.0" height="18" rx="2" fill="#247ba0"/>
+<text x="951.0" y="132" font-family="Arial,sans-serif" font-size="12" fill="#263238" text-anchor="start" font-weight="normal">1</text>
+<text x="391" y="160" font-family="Arial,sans-serif" font-size="12" fill="#263238" text-anchor="end" font-weight="normal">planned_route_hours × remaining_scheduled_hours (r=1.000)</text>
+<rect x="400" y="145" width="544.9" height="18" rx="2" fill="#247ba0"/>
+<text x="950.9127596808419" y="159" font-family="Arial,sans-serif" font-size="12" fill="#263238" text-anchor="start" font-weight="normal">0.99984</text>
+<text x="391" y="187" font-family="Arial,sans-serif" font-size="12" fill="#263238" text-anchor="end" font-weight="normal">planned_route_hours × remaining_scheduled_distance_km (r=0.995)</text>
+<rect x="400" y="172" width="542.4" height="18" rx="2" fill="#247ba0"/>
+<text x="948.4111547317248" y="186" font-family="Arial,sans-serif" font-size="12" fill="#263238" text-anchor="start" font-weight="normal">0.99525</text>
+<text x="391" y="214" font-family="Arial,sans-serif" font-size="12" fill="#263238" text-anchor="end" font-weight="normal">planned_route_distance_km × planned_route_hours (r=0.995)</text>
+<rect x="400" y="199" width="542.4" height="18" rx="2" fill="#247ba0"/>
+<text x="948.4111547317247" y="213" font-family="Arial,sans-serif" font-size="12" fill="#263238" text-anchor="start" font-weight="normal">0.99525</text>
+<text x="391" y="241" font-family="Arial,sans-serif" font-size="12" fill="#263238" text-anchor="end" font-weight="normal">planned_route_distance_km × remaining_scheduled_hours (r=0.995)</text>
+<rect x="400" y="226" width="542.3" height="18" rx="2" fill="#247ba0"/>
+<text x="948.2855405104242" y="240" font-family="Arial,sans-serif" font-size="12" fill="#263238" text-anchor="start" font-weight="normal">0.995019</text>
+<text x="391" y="268" font-family="Arial,sans-serif" font-size="12" fill="#263238" text-anchor="end" font-weight="normal">remaining_scheduled_hours × remaining_scheduled_distance_km (r=0.995)</text>
+<rect x="400" y="253" width="542.3" height="18" rx="2" fill="#247ba0"/>
+<text x="948.2855405104242" y="267" font-family="Arial,sans-serif" font-size="12" fill="#263238" text-anchor="start" font-weight="normal">0.995019</text>
+<text x="391" y="295" font-family="Arial,sans-serif" font-size="12" fill="#263238" text-anchor="end" font-weight="normal">latest_event_age_minutes × minutes_since_pickup_scan (r=0.974)</text>
+<rect x="400" y="280" width="531.0" height="18" rx="2" fill="#247ba0"/>
+<text x="936.9652974089238" y="294" font-family="Arial,sans-serif" font-size="12" fill="#263238" text-anchor="start" font-weight="normal">0.974248</text>
+</svg>
