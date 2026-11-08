@@ -1,0 +1,47 @@
+name,data_type,role,source,definition,missing_policy
+shipment_id,string,identifier,ETAEstimate.shipment_id,Snapshot metadata; exclude from the model matrix.,not-null
+eta_id,string,identifier,ETAEstimate.eta_id,Snapshot metadata; exclude from the model matrix.,not-null
+predicted_at,datetime_utc,identifier,ETAEstimate.predicted_at,Snapshot metadata; exclude from the model matrix.,not-null
+service_mode,category,predictor,effective ServiceLevel.mode,Operational value from effective ServiceLevel.mode available as of predicted_at.,null plus service_reference_missing flag
+service_target_transit_hours,float,predictor,effective ServiceLevel.target_transit_hours,Operational value from effective ServiceLevel.target_transit_hours available as of predicted_at.,null plus service_reference_missing flag
+service_reference_missing,boolean,predictor,ServiceLevel effective dates,One when the associated source observation/value is missing; otherwise zero.,always 0 or 1
+carrier_type,category,predictor,effective Carrier.carrier_type,Operational value from effective Carrier.carrier_type available as of predicted_at.,null plus carrier_reference_missing flag
+carrier_reference_missing,boolean,predictor,Carrier effective dates,One when the associated source observation/value is missing; otherwise zero.,always 0 or 1
+carrier_historical_on_time_rate,float,predictor,Prior delivered events for this carrier with event_time and ingestion_time <= predicted_at; Beta-smoothed,Smoothed reliability from other delivered events with event_time and ingestion_time at or before predicted_at.,prior rate used and carrier_history_missing flag set when no history
+carrier_historical_delivery_count,integer,predictor,"Prior delivered events available by predicted_at, excluding current shipment","Eligible prior carrier deliveries known by predicted_at, excluding the current shipment.",0 when no history
+carrier_history_missing,boolean,predictor,eligible prior delivered event availability,One when the associated source observation/value is missing; otherwise zero.,always 0 or 1
+shipment_priority,category,predictor,Shipment.priority,Operational value from Shipment.priority available as of predicted_at.,not-null reference
+shipment_weight_kg,float,predictor,Shipment.weight_kg,Operational value from Shipment.weight_kg available as of predicted_at.,null plus weight_missing flag
+weight_missing,boolean,predictor,Shipment.weight_kg,One when the associated source observation/value is missing; otherwise zero.,always 0 or 1
+journey_elapsed_minutes,float,predictor,predicted_at - Shipment.created_at,Minutes from shipment created_at to predicted_at.,not-null timestamps
+planned_route_distance_km,float,predictor,ShipmentLeg + Route.distance_km,Operational value from ShipmentLeg + Route.distance_km available as of predicted_at.,0 if no remaining route legs
+planned_route_hours,float,predictor,ShipmentLeg + Route.planned_transit_hours,Operational value from ShipmentLeg + Route.planned_transit_hours available as of predicted_at.,0 if no remaining route legs
+planned_leg_count,integer,predictor,ShipmentLeg.leg_number,Operational value from ShipmentLeg.leg_number available as of predicted_at.,not-null legs
+remaining_scheduled_leg_count,integer,predictor,ShipmentLeg.planned_arrival_time,Operational value from ShipmentLeg.planned_arrival_time available as of predicted_at.,0 if no scheduled legs remain
+remaining_scheduled_hours,float,predictor,ShipmentLeg planned times,Sum of planned leg time remaining after predicted_at for legs whose planned arrival is later.,0 if no scheduled legs remain
+remaining_scheduled_distance_km,float,predictor,ShipmentLeg + Route.distance_km,Sum of route distance for legs whose planned arrival is later than predicted_at.,0 if no scheduled legs remain
+eligible_event_count,integer,predictor,TrackingEvent with both times <= predicted_at,Number of scans with event_time <= predicted_at AND ingestion_time <= predicted_at.,0 when no eligible events
+latest_event_type,category,predictor,latest eligible TrackingEvent.event_type,Operational value from latest eligible TrackingEvent.event_type available as of predicted_at.,null plus latest_event_missing flag
+latest_event_missing,boolean,predictor,eligible TrackingEvent availability,One when the associated source observation/value is missing; otherwise zero.,always 0 or 1
+last_observed_state,category,predictor,state inferred from latest eligible TrackingEvent,State inferred from the latest event eligible at predicted_at; never reads current lifecycle_state.,null plus latest_event_missing flag
+latest_event_age_minutes,float,predictor,predicted_at - latest eligible event_time,Minutes since the latest eligible event_time.,null plus latest_event_missing flag
+latest_event_leg_number,integer,predictor,latest eligible event leg_id -> ShipmentLeg.leg_number,Operational value from latest eligible event leg_id -> ShipmentLeg.leg_number available as of predicted_at.,null if event has no leg or event is absent
+pickup_scan_seen,boolean,predictor,eligible TrackingEvent.event_type=picked_up,One when the qualifying scan is available by predicted_at; otherwise zero.,always 0 or 1
+minutes_since_pickup_scan,float,predictor,predicted_at - latest eligible pickup event_time,Minutes since the latest eligible picked_up event_time.,null plus pickup_scan_seen flag
+weather_observation_count,integer,predictor,route/facility WeatherEvent observed by predicted_at,Realized weather observations observed and ingested by predicted_at.,0 if none observed
+active_weather_disruption_count,integer,predictor,known WeatherEvent valid at predicted_at,Known realized weather windows active at predicted_at.,0 if no active disruption
+max_active_weather_severity,integer,predictor,active WeatherEvent.severity,Maximum severity among active realized weather observations available by predicted_at.,0 if none active
+forecast_weather_count,integer,predictor,"WeatherForecast issued_at and ingestion_time <= predicted_at, valid interval overlaps route plan",Forecasts issued and ingested by predicted_at whose validity intersects the remaining route.,0 when no eligible forecast
+max_forecast_weather_severity,integer,predictor,eligible route/facility WeatherForecast.severity,"Maximum severity in eligible as-of forecasts; this is forecast, not realized weather.",0 when no eligible forecast
+forecast_precipitation_mm,float,predictor,eligible WeatherForecast.precipitation_mm,Mean precipitation forecast across eligible as-of forecast rows.,null plus forecast_weather_missing flag
+forecast_wind_speed_kph,float,predictor,eligible WeatherForecast.wind_speed_kph,Mean wind speed forecast across eligible as-of forecast rows.,null plus forecast_weather_missing flag
+forecast_weather_missing,boolean,predictor,eligible WeatherForecast availability,One when the associated source observation/value is missing; otherwise zero.,always 0 or 1
+weather_observation_missing,boolean,predictor,weather observation availability,One when the associated source observation/value is missing; otherwise zero.,always 0 or 1
+queue_observation_count,integer,predictor,FacilityQueue observed by predicted_at at shipment route facilities,Count of facilities with at least one queue observation available by predicted_at.,0 if none observed
+max_observed_queue_length,integer,predictor,latest eligible FacilityQueue per facility,Maximum queue length from the latest queue observation observed and ingested by predicted_at per route facility.,null plus queue_observation_missing flag
+mean_observed_wait_minutes,float,predictor,latest eligible FacilityQueue per facility,"Mean estimated, not actual, wait from queue observations available by predicted_at.",null plus queue_wait_missing flag
+queue_wait_missing,boolean,predictor,FacilityQueue.estimated_wait_minutes,One when the associated source observation/value is missing; otherwise zero.,always 0 or 1
+queue_observation_missing,boolean,predictor,eligible FacilityQueue availability,One when the associated source observation/value is missing; otherwise zero.,always 0 or 1
+target_delivery_time,datetime_utc,target,Shipment.actual_delivery_time,"Observed Shipment.actual_delivery_time; a target only, never a predictor.",null when shipment has no actual delivery
+target_remaining_hours,float,target,actual_delivery_time - predicted_at,(actual_delivery_time - predicted_at) in hours; null unless delivery occurs after predicted_at.,null when target is absent or not after prediction
+target_eligible,boolean,target,actual_delivery_time > predicted_at,One when actual_delivery_time is known and later than predicted_at; otherwise zero.,always 0 or 1
